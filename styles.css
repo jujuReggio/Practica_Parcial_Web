@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary: #163f1c;
+    --secondary: #558d9e;
+    --soft: #2c4e2d;
+    --light-accent: #168b5e;
+    --green: #8FAD88;
+    --formButton: #3c5237;
+
+    --font-default: "Roboto", sans-serif;
+    --font-alt: "Montserrat", sans-serif;
+
+    --bg: #c6dac1;
+    --text: #11420a;
+    --card: rgb(161, 184, 157);
+}
+
+/* modo oscuro */
+body[data-theme="dark"] {
+    --bg: #314e48;
+    --text: #8eb1a9;
+    --card: #4f706a;
+
+    --formButton: #314e48;
+    --primary:  #c2ddd2;       /* títulos */
+    --secondary: #d1f0e9;     /* links */
+    --soft: #577e77;          /* bordes */
+    --green: #a8d7c4;         /* botones hover */
+    --light-accent: #2f8a7e; 
+}
+body {
+    font-family: var(--font-default);
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    transition: background .3s, color .3s;
+}
+
+body[data-font="alt"] {
+    font-family: var(--font-alt);
+}
+
+body[data-font="alt"] {
+    font-family: var(--font-alt);
+}
+
+h2, h3, h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-green);
+}
+
+/*   Header   */
+.ThemeButtons {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.ThemeButtons button {
+    background-color: var(--soft);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background .2s, transform .1s;
+}
+
+.ThemeButtons button:hover {
+    background-color: var(--secondary);
+    transform: scale(1.02);
+}
+
+/*  Contenedor Principal  */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/*  Ficha Personal  */
+.card {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bg);
+    border: 1px solid var(--soft);
+    border-radius: 12px;
+}
+
+.profile-picture {
+    width: 160px;
+    height: 160px;
+    border-radius: 5%;
+    object-fit: cover;
+    border: 4px solid var(--light-accent);
+}
+
+.info ul {
+    padding-left: 18px;
+}
+
+.github-link {
+    font-weight: 700;
+    color: var(--primary);
+}
+.github-link:hover {
+    color: var(--green);
+}
+
+/*    FORMULARIO     */
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: block;
+    color: var(--primary);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--soft);
+    background-color: var(--bg);
+    color: var(--text);
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color: var(--formButton);
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background .3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary);
+}
+
+
+.validation-message {
+    background-color: var(--light-accent);
+    color: #1a3300;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+label.error {
+    color: #B00020;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 700px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture {
+        width: 130px;
+        height: 130px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
