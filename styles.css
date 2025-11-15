@@ -62,15 +62,18 @@ a:hover {
 
 /*   Header   */
 .ThemeButtons {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 
 .ThemeButtons button {
     background-color: var(--soft);
     color: white;
     border: none;
-    padding: 10px 18px;
+    padding: 10px 16px;
     margin: 5px;
     border-radius: 6px;
     cursor: pointer;
@@ -80,11 +83,17 @@ a:hover {
 
 .ThemeButtons button:hover {
     background-color: var(--secondary);
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
+.left-controls,
+.right-controls {
+    display: flex;
+    gap: 10px;
+}
 /*  Contenedor Principal  */
 .container {
+    flex: 1;
     max-width: 900px;
     margin: 0 auto;
     background-color: var(--card);
@@ -187,6 +196,14 @@ label.error {
     margin-top: 5px;
 }
 
+.site-footer {
+    background-color: var(--soft);
+    color: white;
+    text-align: center; 
+    padding: 25px 10px;
+    margin-top: 40px;
+    border-radius: 12px 12px 0 0;
+}
 
 @media (max-width: 700px) {
     .card {
